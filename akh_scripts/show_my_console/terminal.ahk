@@ -18,8 +18,13 @@ if WinExist("ahk_exe WindowsTerminal.exe") {
         WinActivate, ahk_exe WindowsTerminal.exe
     }
 } else{
+    previous_active := WinExist("A")
     run, C:\PATH_TO_THIS_REPO\akh_scripts\show_my_console\terminal_shortcut
 }
+return
+
++SC029::
+Send ²
 return
 
 ^SC029::
